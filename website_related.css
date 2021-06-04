@@ -1,0 +1,232 @@
+body {                  /* equivalent to '*'   */
+    background-color: blanchedalmond;
+}
+/*
+*{
+    background-color: cyan;             //min-width:100vh;    vertical_horizontal
+}
+*/
+button {
+    font-size: 13px;
+    border: 2px thick black;
+    border-radius: 15px;
+}
+h1 , h2 {
+    font-style: italic;
+    border: 2px dotted black;
+}
+#diff:hover {
+    background-color: darkturquoise;
+    color: saddlebrown;
+}
+span {
+    color: saddlebrown;
+    background-color: salmon;
+}
+.tag {                          /* only class*/
+    background-color: slategrey;
+    color: black;
+}
+button a {                  /*li----->tag of diff types   -----> a   href  */
+    color: red;
+}
+.post a{
+    color: royalblue;
+}
+p + a {     /* a is just after p*/
+    background-color: rgb(43, 43, 48) ;
+    text-decoration: none;
+    color: chartreuse;
+}
+form > button {                 /* form has button descendant so it do rather it will not*/
+    background-color: chartreuse;
+}
+/*
+form + button {                             doesnt do anything as button should be after form
+    background-color: chartreuse;
+}
+*/
+input[type="password"] {
+    background-color: chocolate;
+}
+a[href*="options"] {        /*depend on site name or url*/
+    color: maroon;
+}
+a[href$=".org"]{
+    color: forestgreen;
+}
+.asd {
+    background-position: center;
+}
+button:hover {
+    background-color: gold;
+    color: gray;
+}
+button:active {
+    background-color: lightgreen;
+}
+.divi {
+    background-color: #a1a7a0;
+}
+.divi:nth-of-type(2n) {      /*2 -----> second element of class*/
+    background-color: skyblue;
+}
+h2::first-letter {      /* ____:____ can also do same work as by definition*/
+    font-size: 50px;
+}
+p::first-line {
+    font-style: italic;
+}
+p::selection {      /* selection of elements*/
+    background-color: yellow;
+}
+/*order matters the one at last is shown at output -----> cascading*/
+h1 , h2 {
+    font-style: inherit;        /*converted to inherit from italic*/
+    /*text-decoration: plum underline wavy;*/
+}
+/* 
+Selectors basicaly help in cascading
+it tells us which priority is first like:
+o INLINE SELECTORS                              -----> in html not stylesheet (not used commonly)
+o ID SELECTORS                                  -----> '#'
+o CLASS , ATTRIBUTE , PSEUDO-CLASS SELECTORS    -----> '.'
+o ELEMENT AND PSEUDO ELEMENT SELECTORS          -----> 'NORMAL ELEMENTS'
+
+INLINE > ID > CLASS > ELEMENT
+
+!important just makes to every element side
+button {
+    background-color: blue !important;
+}
+if body > section > dxfcg
+than attribute near will depend for 'dxfcg' like if body and section are present than section will be considered
+inherit do inheritance like above if some section doesnt inherit with above type like :-----> color: inherit;
+*/
+div {
+    width: 360px;
+    /*height: 100px;*/
+}
+#one {
+    border-width: 3px;
+    border-color: grey;
+    border-style: inset;
+}
+#two {
+    width: 270px;
+    /*border: 2px solid rgb(189, 119, 29);*/
+    border-top: 5px rgb(74, 75, 151) solid;
+    border-left: 6px rgb(74, 75, 151) solid;
+    border-radius: 25% 25%;
+    padding: 10px;  /*padding-left: ; padding-top: ;*/
+}
+#three {
+    border-width: 3px;
+    border-color: firebrick;
+    border-style: ridge;
+    /* box-sizing: border-box; */
+    box-sizing: content-box;
+}
+button {
+    padding: 10px !important;
+    margin: 5px;
+}
+/* 
+vertical | horizontal
+top | horizontal | bottom 
+top | right | bottom | left
+
+h2 {
+    display: inline;
+} 
+display make changes to the propertiesf block level and 
+inline level elements
+*/
+#spaner {
+    background-color: darkslategray;
+    border: 2px double black;
+    color: blanchedalmond;
+    width: 200px;   /*nothing happen due to inline property*/
+    /*padding works in that property*/
+    margin: 5px;/*Works in horizontal but not vertical*/
+    display: block;
+}
+/*display none hides element*/
+#first {
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    border: 5px double black;
+    display: inline-block;
+    margin-right: 30px;             /* can be calculated for window as <-----calc(10%/6)----->  10/% of document*/
+}
+#se {
+    width: 500px;
+    height: 500px;
+    background-color: magenta;
+    border: 2px double black;
+    margin: 50px 100px;
+    font-size: 20px;
+}
+#sedi {
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    margin: 150px;
+    font-size: 0.9em;     /* it depends on parents font size like above section's font size*/
+    /*margin: 2em;   depend on value of above font size*/
+    border: 2px double black;
+}
+ul {
+    font-size: 1.3em;
+}
+ol {
+    font-size: 1.3rem;      /* it depends on roots font size like  font size of root not in this case but generally*/
+}
+#s {
+    width: 500px;
+    height: 500px;
+    background-color: plum;
+}
+#rgba {
+    width: 50%;
+    height: 50%;
+    background-color: rgba(238, 232, 170,1);
+}
+#opacity {
+    width: 50%;
+    height: 50%;
+    background-color: rgb(238, 232, 170);
+    opacity: 0.5;           /*transparent*/
+}
+#last {
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    border: 5px double black;
+    display: inline-block;
+    margin-right: 30px;
+    /*position: static; doesnt do anyhing to like :  top: 100px*/
+    position: relative;
+    top: 20px;
+}
+#middle {
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    border: 5px double black;
+    display: inline-block;
+    margin-right: 30px;
+    position: absolute;         /*remove it from document and make at diff place which is away from ancestor in this case body*/
+    top: 200px;
+}
+#fifi {
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    border: 5px double black;
+    display: inline-block;
+    margin-right: 30px;
+    position: sticky;         /*stick it with document and make at diff place which is moved by the window movement*/
+    top: 20px;
+}
